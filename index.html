@@ -1,0 +1,51 @@
+<!--Starting off woth a DOCTYPE-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Creating a Character with powers-->
+        <title>Character Creation</title>
+    </head>
+    <body background="OIG4.jpg">
+        <header>
+            <h1>Character Creation</h1>
+            <!--Going for a RPG character creator mixed with Anime reincarnation-->
+            <p>You have died and have been reincarnated into another majestic world. Now you must design and determine
+                your new identity and powers.
+            </p>
+        </header>
+        <main>
+            <h2>Create</h2>
+            <!--Creating your character name-->
+            <Label>First Name:</Label><br/>
+            <input type="text" id="FirstName"><br/>
+            <Label>Last Name:</Label><br/>
+            <input type="text" id="LastName"><br/>
+            <!--Choose your power-->
+            <label>Power:</label><br/>
+            <input type="text" id="Power"><br/>
+            <hr/>
+
+            <button onclick="checkForm()">Create Identity</button>
+
+            <script>
+                function checkForm(){
+                    var FirstName = document.getElementById("FirstName").value;
+                    var LastName = document.getElementById("LastName").value;
+                    var Power = document.getElementById("Power").value;
+
+                    if(FirstName.length > 20){
+                        alert("Dude your name is too long. Create a name that has 20 characers");
+                        return;
+                    }
+
+                    var fullName = FirstName + " " + LastName;
+                    alert("Hello " + fullName + " welcome to your new life and your new home");
+                    return;
+                }
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
